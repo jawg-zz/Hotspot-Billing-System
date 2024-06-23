@@ -46,53 +46,9 @@ can be Installed in Raspberry Pi Device.
 
 The problem with windows is hard to set cronjob, better Linux
 
-## Changelog
-
-[CHANGELOG.md](CHANGELOG.md)
-
 ## Installation
 
 [Installation instructions](https://github.com/hotspotbilling/phpnuxbill/wiki)
-
-## Freeradius
-
-Support [Freeradius with Database](https://github.com/hotspotbilling/phpnuxbill/wiki/FreeRadius)
-
-## Community Support
-
-- [Github Discussion](https://github.com/hotspotbilling/phpnuxbill/discussions)
-- [Telegram Group](https://t.me/phpmixbill)
-
-## Technical Support
-
-This Software is Free and Open Source, Without any Warranty.
-
-Even if the software is free, but Technical Support is not,
-Technical Support Start from Rp 500.000 or $50
-
-If you chat me for any technical support,
-you need to pay,
-
-ask anything for free in the [discussion](/hotspotbilling/phpnuxbill/discussions) page or [Telegram Group](https://t.me/phpnuxbill)
-
-Contact me at [Telegram](https://t.me/ibnux)
-
-## License
-
-GNU General Public License version 2 or later
-
-see [LICENSE](LICENSE) file
-
-
-## Donate to ibnux
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/ibnux)
-
-BCA: 5410454825
-
-Mandiri: 163-000-1855-793
-
-a.n Ibnu Maksum
 
 ## SPONSORS
 
