@@ -1,5 +1,3 @@
-[![ReadMeSupportPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-project.svg)](https://s.id/standwithpalestine)
-
 # PHPNuxBill - PHP Mikrotik Billing
 
 ![PHPNuxBill](install/img/logo.png)
