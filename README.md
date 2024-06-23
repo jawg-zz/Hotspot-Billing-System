@@ -50,7 +50,3 @@ The problem with windows is hard to set cronjob, better Linux
 
 [Installation instructions](https://github.com/hotspotbilling/phpnuxbill/wiki)
 
-## SPONSORS
-
-- [mlink.id](https://mlink.id)
-- [https://github.com/sonyinside](https://github.com/sonyinside)
