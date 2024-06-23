@@ -22,7 +22,7 @@ See [How it Works / Cara Kerja](https://github.com/hotspotbilling/phpnuxbill/wik
 
 ## Payment Gateway And Plugin
 
-- [Payment Gateway List](https://github.com/orgs/hotspotbilling/repositories?q=payment+gateway)
+- [M-Pesa Payment Gateway](https://developer.safaricom.co.ke/)
 - [Plugin List](https://github.com/orgs/hotspotbilling/repositories?q=plugin)
 
 You can download payment gateway and Plugin from Plugin Manager
