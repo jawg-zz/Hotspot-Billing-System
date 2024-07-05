@@ -1,11 +1,5 @@
 <?php
 
-/**
- *  PHP Mikrotik Billing (https://github.com/hotspotbilling/phpnuxbill/)
- *  by https://t.me/ibnux
- **/
-
-
 _auth();
 $ui->assign('_title', Lang::T('My Account'));
 $ui->assign('_system_menu', 'accounts');
