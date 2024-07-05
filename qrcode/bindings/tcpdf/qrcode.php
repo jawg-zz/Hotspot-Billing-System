@@ -7,14 +7,7 @@ if (!defined('QRCODEDEFS')) {
 	 * Indicate that definitions for this class are set
 	 */
 	define('QRCODEDEFS', true);
-
-	// -----------------------------------------------------
-
-	// Encoding modes (characters which can be encoded in QRcode)
-
-	/**
-	 * Encoding mode
-	 */
+	 
 	define('QR_MODE_NL', -1);
 
 	/**
