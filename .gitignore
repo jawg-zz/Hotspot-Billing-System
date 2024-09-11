@@ -22,7 +22,6 @@ system/plugin/ui/*
 ui/ui_custom/**
 !ui/ui_custom/index.html
 !ui/ui_custom/README.md
-system/uploads/**
 !system/uploads/*.default.png
 system/uploads/sms/**
 !system/uploads/sms/index.html
