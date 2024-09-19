@@ -13,7 +13,7 @@ services:
     volumes:
       - mariadb-data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=$SERVICE_PASSWORD_ROOT
+      - MYSQL_ROOT_PASSWORD=rootpass
       - MYSQL_DATABASE=netpass
       - MYSQL_USER=netbill
       - MYSQL_PASSWORD=netbillpass
