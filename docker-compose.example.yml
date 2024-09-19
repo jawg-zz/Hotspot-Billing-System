@@ -15,8 +15,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=$SERVICE_PASSWORD_ROOT
       - MYSQL_DATABASE=netpass
-      - MYSQL_USER=$SERVICE_USER_NETBILL
-      - MYSQL_PASSWORD=$SERVICE_PASSWORD_NETBILL
+      - MYSQL_USER=netbill
+      - MYSQL_PASSWORD=netbillpass
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 5s
