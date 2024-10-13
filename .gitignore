@@ -1,4 +1,5 @@
 config.php
+config.example.php
 .DS_Store
 .vscode/
 ui/ui/compiled
