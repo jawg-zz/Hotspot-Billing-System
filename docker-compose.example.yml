@@ -12,4 +12,10 @@ services:
       - MYSQL_DATABASE=$MYSQL_DATABASE
       - MYSQL_USER=$MYSQL_USER
       - MYSQL_PASSWORD=$MYSQL_PASSWORD
+    volumes:
+      - 
+        type: bind
+        source: ./netbill/config/config.php
+        target: /var/www/html/config.php
+        content: ""
 
