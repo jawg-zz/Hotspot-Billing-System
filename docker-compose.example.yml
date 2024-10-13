@@ -5,20 +5,8 @@ services:
     build: ./
     restart: unless-stopped
     environment:
-      TZ: Africa/Nairobi
-    depends_on:
-      - mariadb
-  mariadb:
-    image: mariadb:11
-    volumes:
-      - mariadb-data:/var/lib/mysql
-    environment:
+      - TZ= Africa/Nairobi
       - MYSQL_ROOT_PASSWORD=rootpass
       - MYSQL_DATABASE=netbill
       - MYSQL_USER=netbill
       - MYSQL_PASSWORD=netbillpass
-    healthcheck:
-      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
-      interval: 5s
-      timeout: 20s
-      retries: 10
