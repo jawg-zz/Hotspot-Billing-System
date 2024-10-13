@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       - TZ= Africa/Nairobi
-      - MYSQL_ROOT_PASSWORD=rootpass
-      - MYSQL_DATABASE=netbill
-      - MYSQL_USER=netbill
-      - MYSQL_PASSWORD=netbillpass
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQL_DATABASE
+      - MYSQL_USER=$MYSQL_USER
+      - MYSQL_PASSWORD=$MYSQL_PASSWORD
