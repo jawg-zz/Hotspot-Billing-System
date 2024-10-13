@@ -16,6 +16,6 @@ services:
       - 
         type: bind
         source: ./netbill/config/config.php
-        target: /var/www/html/config/config.php
+        target: /var/www/html/config.php
         content: ""
 
