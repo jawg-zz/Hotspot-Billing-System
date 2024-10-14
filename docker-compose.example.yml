@@ -18,9 +18,3 @@ services:
         source: ./netbill/config/config.php
         target: /var/www/html/config.php
         content: ""
-      - type: bind
-        source: ./netbill/site
-        target: /var/www/html
-        read_only: false
-        user: "www-data"
-
