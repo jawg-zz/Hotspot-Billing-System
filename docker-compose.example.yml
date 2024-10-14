@@ -13,6 +13,7 @@ services:
       - MYSQL_USER=$MYSQL_USER
       - MYSQL_PASSWORD=$MYSQL_PASSWORD
     volumes:
+      - ./netbill/site:/var/www/html
       - 
         type: bind
         source: ./netbill/config/config.php
