@@ -46,7 +46,7 @@
             </div>
             <div class="form-group row">
               <div class="offset-md-2 col-md-6">
-                <button class="btn btn-primary btn-lg form-control" type="submit">{$_L['Save']}</button>
+                <button class="btn btn-primary btn-lg form-control" type="submit">Save</button>
               </div>
             </div>
           </div>
