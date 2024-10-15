@@ -10,43 +10,43 @@
           </div>
           <div class="card-body">
             <div class="form-group row">
-              <label for="mpesa_consumer_key" class="col-md-2 control-label">Consumer Key</label>
+              <label for="mpesa_consumer_key" class="col-md-2 control-label">Consumer Key <span class="text-danger">*</span></label>
               <div class="col-md-6">
-                <input type="text" class="form-control" id="mpesa_consumer_key" name="mpesa_consumer_key"
+                <input type="text" class="form-control" id="mpesa_consumer_key" name="mpesa_consumer_key" required
                        value="{$_c['mpesa_consumer_key']}" placeholder="Enter Consumer Key">
               </div>
             </div>
             <div class="form-group row">
-              <label for="mpesa_consumer_secret" class="col-md-2 control-label">Consumer Secret</label>
+              <label for="mpesa_consumer_secret" class="col-md-2 control-label">Consumer Secret <span class="text-danger">*</span></label>
               <div class="col-md-6">
-                <input type="password" class="form-control" id="mpesa_consumer_secret" name="mpesa_consumer_secret"
+                <input type="password" class="form-control" id="mpesa_consumer_secret" name="mpesa_consumer_secret" required
                        value="{$_c['mpesa_consumer_secret']}" placeholder="Enter Consumer Secret">
               </div>
             </div>
             <div class="form-group row">
-              <label for="mpesa_passkey" class="col-md-2 control-label">Passkey</label>
+              <label for="mpesa_passkey" class="col-md-2 control-label">Passkey <span class="text-danger">*</span></label>
               <div class="col-md-6">
-                <input type="password" class="form-control" id="mpesa_passkey" name="mpesa_passkey"
+                <input type="password" class="form-control" id="mpesa_passkey" name="mpesa_passkey" required
                        value="{$_c['mpesa_passkey']}" placeholder="Enter Passkey">
               </div>
             </div>
             <div class="form-group row">
-              <label for="mpesa_shortcode" class="col-md-2 control-label">Shortcode</label>
+              <label for="mpesa_shortcode" class="col-md-2 control-label">Shortcode <span class="text-danger">*</span></label>
               <div class="col-md-6">
-                <input type="text" class="form-control" id="mpesa_shortcode" name="mpesa_shortcode"
+                <input type="text" class="form-control" id="mpesa_shortcode" name="mpesa_shortcode" required
                        value="{$_c['mpesa_shortcode']}" placeholder="Enter Shortcode">
               </div>
             </div>
             <div class="form-group row">
-              <label for="callback_url" class="col-md-2 control-label">Callback URL</label>
+              <label for="callback_url" class="col-md-2 control-label">Callback URL <span class="text-danger">*</span></label>
               <div class="col-md-6">
-                <input type="text" readonly class="form-control" id="callback_url" value="{$_url}callback/mpesa"
+                <input type="text" readonly class="form-control" id="callback_url" value="{$_url}callback/mpesa" required
                        onclick="this.select()">
               </div>
             </div>
             <div class="form-group row">
               <div class="col-lg-offset-2 col-lg-10">
-                <button class="btn btn-primary waves-effect waves-light" type="submit">{$_L['Save']}</button>
+                <button class="btn btn-primary btn-lg waves-effect waves-light" type="submit">{$_L['Save']}</button>
               </div>
             </div>
           </div>
