@@ -1,61 +1,67 @@
 {include file="sections/header.tpl"}
 
 <form class="form-horizontal" method="post" autocomplete="off" role="form" action="{$_url}paymentgateway/mpesastk">
+  <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="panel panel-primary panel-hovered panel-stacked mb30">
-                <div class="panel-heading">M-Pesa STK Push Settings</div>
-                <div class="panel-body">
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Consumer Key</label>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" id="mpesa_consumer_key" name="mpesa_consumer_key"
-                                value="{$_c['mpesa_consumer_key']}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Consumer Secret</label>
-                        <div class="col-md-6">
-                            <input type="password" class="form-control" id="mpesa_consumer_secret" name="mpesa_consumer_secret"
-                                value="{$_c['mpesa_consumer_secret']}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Passkey</label>
-                        <div class="col-md-6">
-                            <input type="password" class="form-control" id="mpesa_passkey" name="mpesa_passkey"
-                                value="{$_c['mpesa_passkey']}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Shortcode</label>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" id="mpesa_shortcode" name="mpesa_shortcode"
-                                value="{$_c['mpesa_shortcode']}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">Callback URL</label>
-                        <div class="col-md-6">
-                            <input type="text" readonly class="form-control" onclick="this.select()"
-                                value="{$_url}callback/mpesa">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-lg-offset-2 col-lg-10">
-                            <button class="btn btn-primary waves-effect waves-light" type="submit">{$_L['Save']}</button>
-                        </div>
-                    </div>
-                    <pre>/ip hotspot walled-garden
+      <div class="col-sm-12 col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h4>M-Pesa STK Push Settings</h4>
+          </div>
+          <div class="card-body">
+            <div class="form-group row">
+              <label for="mpesa_consumer_key" class="col-md-2 control-label">Consumer Key</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="mpesa_consumer_key" name="mpesa_consumer_key"
+                       value="{$_c['mpesa_consumer_key']}" placeholder="Enter Consumer Key">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="mpesa_consumer_secret" class="col-md-2 control-label">Consumer Secret</label>
+              <div class="col-md-6">
+                <input type="password" class="form-control" id="mpesa_consumer_secret" name="mpesa_consumer_secret"
+                       value="{$_c['mpesa_consumer_secret']}" placeholder="Enter Consumer Secret">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="mpesa_passkey" class="col-md-2 control-label">Passkey</label>
+              <div class="col-md-6">
+                <input type="password" class="form-control" id="mpesa_passkey" name="mpesa_passkey"
+                       value="{$_c['mpesa_passkey']}" placeholder="Enter Passkey">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="mpesa_shortcode" class="col-md-2 control-label">Shortcode</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control" id="mpesa_shortcode" name="mpesa_shortcode"
+                       value="{$_c['mpesa_shortcode']}" placeholder="Enter Shortcode">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="callback_url" class="col-md-2 control-label">Callback URL</label>
+              <div class="col-md-6">
+                <input type="text" readonly class="form-control" id="callback_url" value="{$_url}callback/mpesa"
+                       onclick="this.select()">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button class="btn btn-primary waves-effect waves-light" type="submit">{$_L['Save']}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-info">
+          <h5>Additional Configuration</h5>
+          <pre>/ip hotspot walled-garden
 add dst-host=safaricom.co.ke
 add dst-host=*.safaricom.co.ke
 add dst-host=*.safaricom.com
 </pre>
-                    <small id="emailHelp" class="form-text text-muted">Set Telegram Bot to get any error and
-                        notification</small>
-                </div>
-            </div>
         </div>
+        <small id="emailHelp" class="form-text text-muted">Set Telegram Bot to get any error and notification</small>
+      </div>
     </div>
+  </div>
 </form>
 {include file="sections/footer.tpl"}
