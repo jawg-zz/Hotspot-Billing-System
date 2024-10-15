@@ -1,5 +1,7 @@
+<!-- sections/header.tpl is assumed to be the header template -->
 {include file="sections/header.tpl"}
 
+<!-- M-Pesa STK Push Settings Form -->
 <form class="form-horizontal" method="post" autocomplete="off" role="form" action="{$_url}paymentgateway/mpesastk">
   <div class="container-fluid">
     <div class="row">
@@ -9,6 +11,7 @@
             <h4>M-Pesa STK Push Settings</h4>
           </div>
           <div class="card-body">
+            <!-- Consumer Key Field -->
             <div class="form-group row">
               <label for="mpesa_consumer_key" class="col-md-2 col-form-label">Consumer Key <span class="text-danger">*</span></label>
               <div class="col-md-6">
@@ -16,6 +19,8 @@
                        value="{$_c['mpesa_consumer_key']}" placeholder="Enter Consumer Key">
               </div>
             </div>
+
+            <!-- Consumer Secret Field -->
             <div class="form-group row">
               <label for="mpesa_consumer_secret" class="col-md-2 col-form-label">Consumer Secret <span class="text-danger">*</span></label>
               <div class="col-md-6">
@@ -23,6 +28,8 @@
                        value="{$_c['mpesa_consumer_secret']}" placeholder="Enter Consumer Secret">
               </div>
             </div>
+
+            <!-- Passkey Field -->
             <div class="form-group row">
               <label for="mpesa_passkey" class="col-md-2 col-form-label">Passkey <span class="text-danger">*</span></label>
               <div class="col-md-6">
@@ -30,6 +37,8 @@
                        value="{$_c['mpesa_passkey']}" placeholder="Enter Passkey">
               </div>
             </div>
+
+            <!-- Shortcode Field -->
             <div class="form-group row">
               <label for="mpesa_shortcode" class="col-md-2 col-form-label">Shortcode <span class="text-danger">*</span></label>
               <div class="col-md-6">
@@ -37,6 +46,8 @@
                        value="{$_c['mpesa_shortcode']}" placeholder="Enter Shortcode">
               </div>
             </div>
+
+            <!-- Callback URL Field -->
             <div class="form-group row">
               <label for="callback_url" class="col-md-2 col-form-label">Callback URL <span class="text-danger">*</span></label>
               <div class="col-md-6">
@@ -44,6 +55,8 @@
                        onclick="this.select()">
               </div>
             </div>
+
+            <!-- Save Button -->
             <div class="form-group row">
               <div class="offset-md-2 col-md-6">
                 <button class="btn btn-primary btn-lg form-control" type="submit">Save</button>
@@ -51,17 +64,24 @@
             </div>
           </div>
         </div>
+
+        <!-- Additional Configuration Alert -->
         <div class="alert alert-info">
           <h5>Additional Configuration</h5>
-          <pre>/ip hotspot walled-garden
+          <pre>
+/ip hotspot walled-garden
 add dst-host=safaricom.co.ke
 add dst-host=*.safaricom.co.ke
 add dst-host=*.safaricom.com
 </pre>
         </div>
+
+        <!-- Telegram Bot Notification Text -->
         <small id="emailHelp" class="form-text text-muted">Set Telegram Bot to get any error and notification</small>
       </div>
     </div>
   </div>
 </form>
+
+<!-- sections/footer.tpl is assumed to be the footer template -->
 {include file="sections/footer.tpl"}
