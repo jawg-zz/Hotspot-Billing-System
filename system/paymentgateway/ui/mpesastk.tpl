@@ -16,7 +16,7 @@
               <label for="mpesa_consumer_key" class="col-md-2 col-form-label">Consumer Key <span class="text-danger">*</span></label>
               <div class="col-md-6">
                 <input type="text" class="form-control" id="mpesa_consumer_key" name="mpesa_consumer_key" required
-                       value="{$_c['mpesa_consumer_key']}" placeholder="Enter Consumer Key">
+                       value="{$_c['mpesa_consumer_key']}" placeholder="Enter Consumer Key" onkeyup="checkFields()">
               </div>
             </div>
 
@@ -25,7 +25,7 @@
               <label for="mpesa_consumer_secret" class="col-md-2 col-form-label">Consumer Secret <span class="text-danger">*</span></label>
               <div class="col-md-6">
                 <input type="password" class="form-control" id="mpesa_consumer_secret" name="mpesa_consumer_secret" required
-                       value="{$_c['mpesa_consumer_secret']}" placeholder="Enter Consumer Secret">
+                       value="{$_c['mpesa_consumer_secret']}" placeholder="Enter Consumer Secret" onkeyup="checkFields()">
               </div>
             </div>
 
@@ -34,7 +34,7 @@
               <label for="mpesa_passkey" class="col-md-2 col-form-label">Passkey <span class="text-danger">*</span></label>
               <div class="col-md-6">
                 <input type="password" class="form-control" id="mpesa_passkey" name="mpesa_passkey" required
-                       value="{$_c['mpesa_passkey']}" placeholder="Enter Passkey">
+                       value="{$_c['mpesa_passkey']}" placeholder="Enter Passkey" onkeyup="checkFields()">
               </div>
             </div>
 
@@ -43,7 +43,7 @@
               <label for="mpesa_shortcode" class="col-md-2 col-form-label">Shortcode <span class="text-danger">*</span></label>
               <div class="col-md-6">
                 <input type="text" class="form-control" id="mpesa_shortcode" name="mpesa_shortcode" required
-                       value="{$_c['mpesa_shortcode']}" placeholder="Enter Shortcode">
+                       value="{$_c['mpesa_shortcode']}" placeholder="Enter Shortcode" onkeyup="checkFields()">
               </div>
             </div>
 
@@ -58,8 +58,9 @@
 
             <!-- Save Button -->
             <div class="form-group row">
-              <div class="offset-md-2 col-md-6">
-                <button class="btn btn-primary btn-lg form-control" type="submit">Save</button>
+              <label for="saveButton" class="col-md-2 col-form-label"></label>
+              <div class="col-md-6">
+                <button class="btn btn-primary btn-lg form-control" type="submit" id="saveButton" disabled>Save</button>
               </div>
             </div>
           </div>
@@ -85,3 +86,18 @@ add dst-host=*.safaricom.com
 
 <!-- sections/footer.tpl is assumed to be the footer template -->
 {include file="sections/footer.tpl"}
+
+<script>
+function checkFields() {
+  var consumerKey = document.getElementById("mpesa_consumer_key").value;
+  var consumerSecret = document.getElementById("mpesa_consumer_secret").value;
+  var passkey = document.getElementById("mpesa_passkey").value;
+  var shortcode = document.getElementById("mpesa_shortcode").value;
+
+  if (consumerKey && consumerSecret && passkey && shortcode) {
+    document.getElementById("saveButton").disabled = false;
+  } else {
+    document.getElementById("saveButton").disabled = true;
+  }
+}
+</script>
