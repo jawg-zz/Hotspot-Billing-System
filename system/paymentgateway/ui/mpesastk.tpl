@@ -46,7 +46,7 @@
             </div>
             <div class="form-group row">
               <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn btn-primary btn-lg waves-effect waves-light" type="submit">{$_L['Save']}</button>
+                <button class="btn btn-primary btn-lg waves-effect waves-light" type="submit">Save</button>
               </div>
             </div>
           </div>
