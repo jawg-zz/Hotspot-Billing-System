@@ -6,7 +6,7 @@
  * Payment Gateway M-Pesa STK Push
  **/
 
-function mpesa_validate_config()
+function mpesa_stk_validate_config()
 {
     global $config;
     if (empty($config['mpesa_consumer_key']) || empty($config['mpesa_consumer_secret']) || empty($config['mpesa_passkey']) || empty($config['mpesa_shortcode'])) {
@@ -15,14 +15,14 @@ function mpesa_validate_config()
     }
 }
 
-function mpesa_show_config()
+function mpesa_stk_show_config()
 {
     global $ui, $config;
     $ui->assign('_title', 'M-Pesa STK Push - Payment Gateway');
     $ui->display('mpesa_stk.tpl');
 }
 
-function mpesa_save_config()
+function mpesa_stk_save_config()
 {
     global $admin;
     $mpesa_consumer_key = _post('mpesa_consumer_key');
@@ -55,7 +55,7 @@ function mpesa_save_config()
     r2(U . 'paymentgateway/mpesa_stk', 's', Lang::T('Settings_Saved_Successfully'));
 }
 
-function mpesa_create_transaction($trx, $user)
+function mpesa_stk_create_transaction($trx, $user)
 {
     global $config;
 
@@ -104,7 +104,7 @@ function mpesa_create_transaction($trx, $user)
     r2(U . "order/view/" . $trx['id'], 's', Lang::T("Please complete the payment on your phone."));
 }
 
-function mpesa_get_status($trx, $user)
+function mpesa_stk_get_status($trx, $user)
 {
     global $config;
 
@@ -151,7 +151,7 @@ function mpesa_get_status($trx, $user)
     }
 }
 
-function mpesa_payment_notification()
+function mpesa_stk_payment_notification()
 {
     $callbackJSONData = file_get_contents('php://input');
     $callbackData = json_decode($callbackJSONData, true);
@@ -191,7 +191,7 @@ function mpesa_payment_notification()
     echo json_encode($response);
 }
 
-function mpesa_get_token()
+function mpesa_stk_get_token()
 {
     global $config;
     $url = mpesa_get_server() . 'oauth/v1/generate?grant_type=client_credentials';
@@ -206,7 +206,7 @@ function mpesa_get_token()
     }
 }
 
-function mpesa_get_server()
+function mpesa_stk_get_server()
 {
     global $_app_stage;
     if ($_app_stage == 'Live') {
