@@ -45,8 +45,8 @@
               </div>
             </div>
             <div class="form-group row">
-              <div class="col-md-12">
-                <button class="btn btn-primary btn-lg btn-block waves-effect waves-light" type="submit">{$_L['Save']}</button>
+              <div class="offset-md-2 col-md-6">
+                <button class="btn btn-primary btn-lg form-control" type="submit">{$_L['Save']}</button>
               </div>
             </div>
           </div>
