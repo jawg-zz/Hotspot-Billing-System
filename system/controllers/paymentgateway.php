@@ -54,6 +54,7 @@ if (file_exists($PAYMENTGATEWAY_PATH . DIRECTORY_SEPARATOR . $action . '.php')) 
     }
 } else {
     if (!empty($action)) {
+        error_log("Action: " . $action);
         r2(U . 'paymentgateway', 'w', Lang::T('Payment Gateway Not Found'));
     } else {
         $files = scandir($PAYMENTGATEWAY_PATH);
