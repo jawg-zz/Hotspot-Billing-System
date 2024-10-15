@@ -1,6 +1,6 @@
 {include file="sections/header.tpl"}
 
-<form class="form-horizontal" method="post" autocomplete="off" role="form" action="{$_url}paymentgateway/mpesa_stk">
+<form class="form-horizontal" method="post" autocomplete="off" role="form" action="{$_url}paymentgateway/mpesastk">
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <div class="panel panel-primary panel-hovered panel-stacked mb30">
