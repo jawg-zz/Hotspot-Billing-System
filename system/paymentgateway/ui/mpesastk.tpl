@@ -60,7 +60,7 @@
             <div class="form-group row">
               <label for="saveButton" class="col-md-2 col-form-label"></label>
               <div class="col-md-6">
-                <button class="btn btn-primary btn-lg form-control" type="submit" id="saveButton" disabled>Save</button>
+                <button class="btn btn-primary btn-lg form-control" type="submit" id="saveButton" disabled style="padding: 0.5rem 2.5rem;>Save</button>
               </div>
             </div>
           </div>
