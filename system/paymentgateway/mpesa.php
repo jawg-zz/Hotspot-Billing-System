@@ -6,7 +6,7 @@
  * Payment Gateway M-Pesa STK Push
  **/
 
-function mpesastk_validate_config()
+function mpesa_validate_config()
 {
     global $config;
     if (empty($config['mpesa_consumer_key']) || empty($config['mpesa_consumer_secret']) || empty($config['mpesa_passkey']) || empty($config['mpesa_shortcode'])) {
@@ -15,14 +15,14 @@ function mpesastk_validate_config()
     }
 }
 
-function mpesastk_show_config()
+function mpesa_show_config()
 {
     global $ui, $config;
     $ui->assign('_title', 'M-Pesa STK Push - Payment Gateway');
-    $ui->display('mpesastk.tpl');
+    $ui->display('mpesa.tpl');
 }
 
-function mpesastk_save_config()
+function mpesa_save_config()
 {
     global $admin;
     $mpesa_consumer_key = _post('mpesa_consumer_key');
@@ -52,10 +52,10 @@ function mpesastk_save_config()
     }
 
     _log('[' . $admin['username'] . ']: M-Pesa STK Push ' . Lang::T('Settings_Saved_Successfully'), 'Admin', $admin['id']);
-    r2(U . 'paymentgateway/mpesastk', 's', Lang::T('Settings_Saved_Successfully'));
+    r2(U . 'paymentgateway/mpesa', 's', Lang::T('Settings_Saved_Successfully'));
 }
 
-function mpesastk_create_transaction($trx, $user)
+function mpesa_create_transaction($trx, $user)
 {
     global $config;
 
@@ -104,7 +104,7 @@ function mpesastk_create_transaction($trx, $user)
     r2(U . "order/view/" . $trx['id'], 's', Lang::T("Please complete the payment on your phone."));
 }
 
-function mpesastk_get_status($trx, $user)
+function mpesa_get_status($trx, $user)
 {
     global $config;
 
@@ -151,7 +151,7 @@ function mpesastk_get_status($trx, $user)
     }
 }
 
-function mpesastk_payment_notification()
+function mpesa_payment_notification()
 {
     $callbackJSONData = file_get_contents('php://input');
     $callbackData = json_decode($callbackJSONData, true);
@@ -191,7 +191,7 @@ function mpesastk_payment_notification()
     echo json_encode($response);
 }
 
-function mpesastk_get_token()
+function mpesa_get_token()
 {
     global $config;
     $url = mpesa_get_server() . 'oauth/v1/generate?grant_type=client_credentials';
@@ -206,7 +206,7 @@ function mpesastk_get_token()
     }
 }
 
-function mpesastk_get_server()
+function mpesa_get_server()
 {
     global $_app_stage;
     if ($_app_stage == 'Live') {

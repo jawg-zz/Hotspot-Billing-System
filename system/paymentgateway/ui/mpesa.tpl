@@ -2,7 +2,7 @@
 {include file="sections/header.tpl"}
 
 <!-- M-Pesa STK Push Settings Form -->
-<form class="form-horizontal" method="post" autocomplete="off" role="form" action="{$_url}paymentgateway/mpesastk">
+<form class="form-horizontal" method="post" autocomplete="off" role="form" action="{$_url}paymentgateway/mpesa">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-md-12">
